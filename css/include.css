@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+/*헤더*/
+#header{
+    position:fixed;
+    width:100%;
+    z-index:1;    
+    background:#000;
+    height:120px;
+    line-height:120px; 
+    text-align:center; 
+}
+
+.gnb{
+    font-size:24px;
+    font-weight:400;
+    font-family: 'Gotham';
+    display:inline-block;
+}
+.gnb li{
+    float:left;
+    margin-right:85px;
+}
+.gnb li:last-child{
+    margin-right:0; 
+}
+.gnb li a{
+    color:#fff;
+}
+.gnb li a::after{
+    content:"";
+    display:block;
+    width:0%;
+    height:1px;
+    background:#FFD2C2;
+    margin-top:-30px;
+    transition:width 0.5s;
+}
+.gnb li a{
+    transition:color 0.5s;
+    
+}
+.gnb li:hover a{
+    color:#FFD2C2;
+}
+.gnb li:hover a::after{
+    width:100%;
+}
+
+/*푸터*/
+#footer{
+    position:relative;
+    width:100%; 
+}

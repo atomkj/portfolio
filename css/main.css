@@ -1,0 +1,272 @@
+@charset "utf-8";
+.mainSlider{
+    position:relative;
+    width:100%;
+    height:975px;
+    overflow:hidden; 
+}
+
+.slider .slick-slide{
+    position:relative;
+    
+}
+
+.mainBg .slick-slide img{
+    position:absolute;
+    left:50%;
+    margin-left:-960px;
+    
+}
+.slider img{
+    display:block;
+}
+.slider{
+    text-align:center; 
+}
+
+.mainBg{
+    display:block;
+    width:100%;  
+}
+.mainImg01 img, .mainImg02 img, .mainImg04 img, .mainImg05 img{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:328px; 
+    margin:0 auto;
+    display:block; 
+}
+.mainImg03 img{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:303px; 
+    margin:0 auto;
+    display:block; 
+}
+.mainImg06 img{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:354px; 
+    margin:0 auto;
+    display:block;
+}
+
+
+
+/*슬라이더버튼*/
+.sliderbtnWrap{
+    width:650px; /*가로값을 지정해줘야 버튼위치적용 가능*/
+    position:absolute;
+    left:50%;
+    margin-left:-325px;
+    bottom:140px;
+}
+
+.leftBtn{
+    float:left;
+}
+.rightBtn{
+    float:right;}
+
+
+/*슬라이더버튼 선만들기*/
+.leftBtn::after,.rightBtn::after{
+    content:"";
+    display:block;
+    width:150px;
+    height:2px;
+    background:#fff;
+    position: absolute;
+    z-index: 1;
+    top:50%;
+    margin-top:-1px;
+}
+.leftBtn::after{
+    left:35px;
+}
+.rightBtn::after{
+    right:35px;
+}
+/*슬라이더버튼 선만들기*/
+
+/*카운터*/
+.slideCount{
+    position: absolute;
+    left:50%;
+    margin-left:-25px; 
+    bottom:215px;
+    z-index: 1;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    pointer-events: none;
+}
+/*카운터*/
+
+.hovicon {
+    display:block;
+    font-size: 45px;
+    height:45px; 
+    cursor: pointer;
+    width: 45px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+    color: #fff;
+}
+.hovicon.effect-4{
+    background:url(../images/main/Btn_L.png) no-repeat center center;
+}
+.hovicon.effect-4.next{
+    background:url(../images/main/Btn_R.png) no-repeat center center;
+}
+.hovicon:after {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content:'';
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+
+/* Effect 4 */
+ .hovicon.effect-4 {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
+}
+.hovicon.effect-4.small {
+    width:50px;
+    height:50px;
+}
+.hovicon.effect-4.mini {
+    widows:50px;
+    height:50px;
+}
+.hovicon.effect-4.sub-a {
+    -webkit-transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+}
+.hovicon.effect-4:before {
+    line-height: 50px;
+}
+.hovicon.effect-4:after {
+    top: -2px;
+    left: -2px;
+    padding: 0;
+    z-index: 10;
+    border: 2px dashed #fff;
+}
+.hovicon.effect-4:hover {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    color: #fff;
+}
+.hovicon.effect-4:hover i {
+    color: #fff;
+}
+/* Effect 4b */
+ .hovicon.effect-4.sub-b:hover {
+    -webkit-transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+}
+.hovicon.effect-4.sub-b:hover:after {
+    -webkit-animation: spinAround 9s linear infinite;
+    -moz-animation: spinAround 9s linear infinite;
+    animation: spinAround 9s linear infinite;
+}
+@-webkit-keyframes spinAround {
+    from {
+        -webkit-transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+/*로딩*/
+#loading {
+    height:100%;
+    width:100%;
+    overflow:hidden; 
+    position: fixed;
+    display: block;
+    background-color: #000;
+    z-index: 99;
+    text-align:center;
+}
+.loading_Txt{
+    position:absolute;
+    width:100%;
+   
+    
+}
+.text{
+    margin-top:250px; 
+}
+.text h1{   
+    color:#fff;
+    display:inline-block; 
+    font-size:100px;
+    font-family: 'Gotham';
+    z-index:100;
+}
+
+.loader1 {
+   display:inline-block;
+   margin-top:100px; 
+}
+.loader1 span {
+   vertical-align:middle;
+   border-radius:100%;
+   display:inline-block;
+   width:10px;
+   height:10px;
+   margin:3px 2px;
+   -webkit-animation:loader1 0.8s linear infinite alternate;
+   animation:loader1 0.8s linear infinite alternate;
+}
+.loader1 span:nth-child(1) {
+   -webkit-animation-delay:-1s;
+   animation-delay:-1s;
+  background:rgba(255, 255, 255,0.9);
+}
+.loader1 span:nth-child(2) {
+   -webkit-animation-delay:-0.8s;
+   animation-delay:-0.8s;
+  background:rgba(255, 255, 255,0.9);
+}
+.loader1 span:nth-child(3) {
+   -webkit-animation-delay:-0.6s;
+   animation-delay:-0.6s;
+  background:rgba(255, 255, 255,0.9);
+}
+.loader1 span:nth-child(4) {
+   -webkit-animation-delay:-0.4s;
+   animation-delay:-0.4s;
+  background:rgba(255, 255, 255,0.9);
+  
+}
+.loader1 span:nth-child(5) {
+   -webkit-animation-delay:-0.2s;
+   animation-delay:-0.2s;
+  background:rgba(255, 255, 255,0.9);
+}
+
+@keyframes loader1 {
+   from {transform: scale(0, 0);}
+   to {transform: scale(1, 1);}
+}
+@-webkit-keyframes loader1 {
+   from {-webkit-transform: scale(0, 0);}
+   to {-webkit-transform: scale(1, 1);}
+}
